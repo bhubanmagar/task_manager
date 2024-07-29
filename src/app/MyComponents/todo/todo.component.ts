@@ -40,6 +40,12 @@ export class TodoComponent implements OnInit {
     this.saveTodos();
   }
 
+  todoCheck(todo: Todo) {
+    const index = this.todos.indexOf(todo);
+    this.todos[index].isActive = !this.todos[index].isActive;
+    this.saveTodos();
+  }
+
   saveTodos() {
     if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
       localStorage.setItem('todos', JSON.stringify(this.todos));
