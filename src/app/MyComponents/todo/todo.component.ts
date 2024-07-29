@@ -26,7 +26,6 @@ export class TodoComponent implements OnInit {
   }
 
   todoDelete(todo: Todo) {
-    console.log(todo);
     const index = this.todos.indexOf(todo);
     if (index > -1) {
       this.todos.splice(index, 1);
@@ -35,7 +34,6 @@ export class TodoComponent implements OnInit {
   }
 
   todoAdd(todo: Todo) {
-    console.log(todo);
     this.todos.push(todo);
     this.saveTodos();
   }

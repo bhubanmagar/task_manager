@@ -18,7 +18,6 @@ export class TodoItemsComponent {
   //
   onClick(todo: Todo) {
     this.deleteTodo.emit(todo);
-    console.log('hello friend');
   }
   //
   onCheckBoxClick(todo: Todo) {
